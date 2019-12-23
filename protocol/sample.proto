@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package sample;
+
+// sample service.
+service SampleService {
+  // sample method.
+  rpc RequestSampleMethod (SampleRequest) returns (SampleResponse) {}
+}
+
+// sample message(request).
+message SampleRequest {
+  int64 id = 1;
+  string requestMessage = 2;
+}
+
+// sample message(request).
+message SampleResponse {
+  int64 id = 1;
+  string responseMessage = 2;
+}
